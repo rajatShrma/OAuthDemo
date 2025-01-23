@@ -1,0 +1,21 @@
+@page
+@model LoginModel
+@{
+    ViewData["Title"] = "Login";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <h1>Login with OAuth</h1>
+    <p>Select a provider to sign in:</p>
+    <form method="post" asp-page-handler="SignIn">
+        <button type="submit" name="provider" value="Google">Login with Google</button>
+        <button type="submit" name="provider" value="Facebook">Login with Facebook</button>
+    </form>
+</body>
+</html>
